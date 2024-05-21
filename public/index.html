@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twilio Verify</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      margin-bottom: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+    .error {
+      margin-bottom: 1rem;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Twilio Verify</h1>
+    <div class="message" id="message"></div>
+    <div class="error" id="error"></div>
+    <form id="start-verify-form">
+      <input type="text" id="phone-number" placeholder="Enter your phone number" required>
+      <button type="submit">Start Verification</button>
+    </form>
+
+    <form id="check-verify-form" style="display:none;">
+      <input type="text" id="verification-code" placeholder="Enter verification code" required>
+      <button type="submit">Verify Code</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

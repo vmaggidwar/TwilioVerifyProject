@@ -1,0 +1,13 @@
+# Open .gitignore file in a text editor and add patterns
+
+# Example .gitignore content:
+*.log
+node_modules/
+.env
+.DS_Store
+Thumbs.db
+/build/
+
+# Save and close the .gitignore file
+
+# Remove any already tracked files that should be ignored
